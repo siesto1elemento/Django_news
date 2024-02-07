@@ -1,19 +1,40 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="{% static 'home.css' %}">
 </head>
 <body>
-    {% for post in all_post %}
-    <a href="{{ post.link }}">
-        <h1>{{ post.title }}</h1>
-    </a>
-        {{ post.author }} ( upvotes : {{ post.upvotes }} )
-    {% endfor %}
-
-
-    
+    <div class="background">
+        <ol class="custom-ordered-list" >
+            {% for post in all_post %}
+            <li>
+                <form method="post" action="{% url 'upvote_post' post.id %}">
+                    {% csrf_token %}
+                    <div class="posts">
+                        <div class="span">
+                            <div>
+                                <button type="submit">
+                                    <img src="https://www.svgrepo.com/show/334337/upvote.svg" alt="" height="15px">
+                                </button>
+                            </div>
+                            <div class="title">
+                                <a href="{{ post.link }}">
+                                    {{ post.title }}
+                                </a>
+                            </div>
+                        </div>
+                        <div class="lower">
+                            By: {{ post.author }} (Upvotes: {{ post.upvotes }}) {{ post.time_added }}
+                        </div>    
+                    </div>
+                </form>
+            </li>
+            {% endfor %}
+        </ol>
+    </div>
 </body>
 </html>
