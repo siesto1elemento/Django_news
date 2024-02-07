@@ -8,7 +8,17 @@
     <link rel="stylesheet" href="{% static 'home.css' %}">
 </head>
 <body>
+    <div class="header">
+        <div class="img">
+            <img src="https://news.ycombinator.com/y18.svg" alt="">
+        </div>
+        <div class="hackernews">
+        <strong>Hacker News</strong>
+        </div>
+    </div>  
+    
     <div class="background">
+        
         <ol class="custom-ordered-list" >
             {% for post in all_post %}
             <li>

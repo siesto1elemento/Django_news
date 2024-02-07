@@ -23,10 +23,11 @@ a{
     text-decoration: none;
 }
 .background{
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
     background-color: #e3e0e0;
     padding-bottom: 10px;
+    padding-top: 0px;
 }
 .lower{
     font-size: small;
@@ -36,5 +37,23 @@ a{
 }
 
 .custom-ordered-list{
-    color:rgb(105, 103, 103)
+    color:rgb(105, 103, 103);
+    margin-top: 1px;
+}
+
+.header{
+    display: flex;
+    background-color: orangered;
+    width: 85%;
+    margin: 0 auto;
+    
+    margin-bottom: 0px;
+}
+.img{
+    padding: 5px;
+}
+.hackernews{
+    padding: 7px;
+    font-size: medium;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
 }
