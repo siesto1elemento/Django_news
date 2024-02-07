@@ -38,7 +38,7 @@
                             </div>
                         </div>
                         <div class="lower">
-                            By: {{ post.author }} (Upvotes: {{ post.upvotes }}) {{ post.time_added }}
+                            By: {{ post.author }} | (Upvotes: {{ post.upvotes }}) | {{ post.time_added.date }} | {{ post.comments.count }} Comment(s)
                         </div>    
                     </div>
                 </form>

@@ -1,15 +1,19 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect,get_object_or_404
 from django.views.decorators.http import require_POST
-from .models import Post
+from .models import Post,Comment
 from django.urls import reverse
 
 
 
 def posts(request):
     all_post = Post.objects.all()
-    
-    
-    return render(request,'home.html',{"all_post":all_post})
+
+    context = {
+        "all_post": all_post,
+        
+    }
+
+    return render(request, 'home.html', context)
 
 def upvote_post(request, post_id):
     if request.method == 'POST':
