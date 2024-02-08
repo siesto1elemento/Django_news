@@ -6,6 +6,10 @@
     <title>Document</title>
 </head>
 <body>
+    <a href="{{ post.link }}">
+        <h1>{{ post.title }}</h1>
+    </a>
+    
     {% for comment in comments_s %}
         <h1>{{ comment.text }}</h1>
     {% endfor %}

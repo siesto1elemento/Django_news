@@ -25,5 +25,5 @@ def upvote_post(request, post_id):
 def comments(request, post_id):
     post = get_object_or_404(Post, id=post_id)
     comments_s = post.comments.all()
-    return render(request,'comments.html',{"comments_s":comments_s}) 
+    return render(request,'comments.html',{"post":post,"comments_s":comments_s}) 
 
