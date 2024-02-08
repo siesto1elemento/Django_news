@@ -38,7 +38,7 @@
                             </div>
                         </div>
                         <div class="lower">
-                            By: {{ post.author }} | (Upvotes: {{ post.upvotes }}) | {{ post.time_added.date }} | {{ post.comments.count }} Comment(s)
+                            By: {{ post.author }} | (Upvotes: {{ post.upvotes }}) | {{ post.time_added.date }} | <a href="{% url 'comments' post.id %}">{{ post.comments.count }} Comment(s)</a> 
                         </div>    
                     </div>
                 </form>

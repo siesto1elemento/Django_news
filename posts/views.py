@@ -20,5 +20,10 @@ def upvote_post(request, post_id):
         post = Post.objects.get(id=post_id)
         post.upvotes += 1
         post.save()
-        return redirect(reverse('home'))  
+        return redirect(reverse('home'))
+    
+def comments(request, post_id):
+    post = get_object_or_404(Post, id=post_id)
+    comments_s = post.comments.all()
+    return render(request,'comments.html',{"comments_s":comments_s}) 
 
