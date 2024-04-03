@@ -2,7 +2,6 @@
     padding-bottom: 5px;
     padding-left: 5px;
     padding-top: 7px;
-    
 }   
     
 a{
@@ -19,6 +18,7 @@ a{
 }
 
 .title{
+    
     font-size: medium;
     text-decoration: none;
 }
@@ -46,15 +46,22 @@ a{
     background-color: orangered;
     width: 85%;
     margin: 0 auto;
-    
     margin-bottom: 0px;
 }
+
 .img{
     padding: 7px;
+}
 
+/* Add the following CSS rules for the login div */
+.login {
+    margin-left: auto; /* Pushes login div to the right */
+    padding: 0 10px;
+    padding-top: 7px; /* Add padding for spacing */
 }
 .hackernews{
-    padding: 7px;
-    font-size: medium;
-    font-family:Verdana, Geneva, Tahoma, sans-serif
+    padding-top: 8px;
+}
+.logout{
+    padding-right: 6px;
 }

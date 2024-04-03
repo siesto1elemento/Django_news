@@ -1,0 +1,61 @@
+/* comments.css */
+
+.background {
+    width: 85%;
+    margin: 0 auto;
+    background-color: #e3e0e0;
+    padding: 20px; /* Combined padding */
+}
+
+.title {
+    font-size: medium;
+    text-decoration: none;
+    padding-bottom: 10px; /* Add padding below the title */
+}
+
+.comment {
+    margin-bottom: 20px; /* Add margin between comments */
+}
+
+a {
+    text-decoration: none;
+}
+
+.lower {
+    font-size: small;
+    color: rgb(76, 74, 74);
+    padding-left: 34px;
+    padding-top: 5px;
+}
+
+.custom-ordered-list {
+    color: rgb(105, 103, 103);
+    margin-top: 1px;
+}
+
+.header {
+    display: flex;
+    background-color: orangered;
+    width: 89%;
+    margin: 0 auto;
+    margin-bottom: 0px;
+}
+
+.img,
+.hackernews {
+    padding: 7px;
+    font-size: medium;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    font-size: medium;
+    color: rgb(105, 103, 103);
+}
+.page-header {
+    text-align: center;
+    font-size: large;
+    color: #333; /* You can adjust the color as needed */
+    margin-top: 20px; /* Add some space above the header */
+    margin-bottom: 20px; /* Add some space below the header */
+}

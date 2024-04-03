@@ -1,17 +1,25 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Comments</title>
+    <link rel="stylesheet" href="{% static 'comments.css' %}">
 </head>
 <body>
-    <a href="{{ post.link }}">
-        <h1>{{ post.title }}</h1>
-    </a>
-    
-    {% for comment in comments_s %}
-        <h1>{{ comment.text }}</h1>
-    {% endfor %}
+    <h1 class="page-header">Comments Page</h1> <!-- Added header indicating this is the comments page -->
+
+    <div class="background">
+        <a href="{{ post.link }}">
+            <h1 class="title">{{ post.title }}</h1>
+        </a>
+        
+        {% for comment in comments_s %}
+            <div class="comment">
+                <p>{{ comment.text }}</p>
+            </div>
+        {% endfor %}
+    </div>
 </body>
 </html>
