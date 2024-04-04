@@ -1,10 +1,10 @@
 from django.db import models
 
 class Post(models.Model):
-    title = models.CharField(max_length=255)
+    title = models.CharField(max_length=255,blank=True)
     link = models.URLField(max_length=200)
-    author = models.CharField(max_length=100)
-    upvotes = models.PositiveBigIntegerField()
+    author = models.CharField(max_length=100,null=True)
+    upvotes = models.PositiveBigIntegerField(default=0)
     time_added = models.DateTimeField(auto_now_add=True)
     
     class Meta:

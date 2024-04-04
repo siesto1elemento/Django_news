@@ -2,6 +2,8 @@ from django.shortcuts import render,redirect,get_object_or_404
 from django.views.decorators.http import require_POST
 from .models import Post,Comment
 from django.urls import reverse
+from django.http import HttpResponse
+from django.contrib.auth.decorators import login_required
 
 
 
@@ -26,4 +28,26 @@ def comments(request, post_id):
     post = get_object_or_404(Post, id=post_id)
     comments_s = post.comments.all()
     return render(request,'comments.html',{"post":post,"comments_s":comments_s}) 
+
+
+@login_required
+def submit(request):
+
+
+    return render(request, 'submit.html')
+
+def submit_form(request):
+    if request.method == 'POST':
+        title = request.POST.get('title')
+        link = request.POST.get('url')
+        author = request.POST.get('Author')
+
+        # Process the form data, for example, save it to the database
+        # Your processing logic goes here
+        new_entry = Post(title=title, link=link, author=author)
+        new_entry.save()
+
+        return redirect('/')  # Redirect to a success page
+    else:
+        return HttpResponse('Method not allowed', status=405)
 
