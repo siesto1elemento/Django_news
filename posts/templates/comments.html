@@ -20,6 +20,15 @@
                 <p>{{ comment.text }}</p>
             </div>
         {% endfor %}
+        <form action="{% url 'update' post.id %}" >
+        {% csrf_token %}
+        <button >Edit post</button>
+        </form>
+        <form action="{% url 'delete' post.id %}" method="post" >
+            {% csrf_token %}
+            <input type="hidden" name="_method" value="delete">
+            <button type="submit" >Delete post</button>
+        </form>
     </div>
 </body>
 </html>

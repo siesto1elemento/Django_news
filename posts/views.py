@@ -58,4 +58,26 @@ def submit_form(request):
         return redirect('/')  # Redirect to a success page
     else:
         return HttpResponse('Method not allowed', status=405)
+    
+@login_required
+def update(request,post_id):
+    post = get_object_or_404(Post, pk=post_id)
+    if request.method == 'POST':
+        post.title = request.POST.get('title')
+        post.url = request.POST.get('url')
+        post.author = request.POST.get('author', 'anonymous')
+        post.save()
+        return redirect('/')  # Redirect to success page or another appropriate page
 
+    return render(request, 'edit.html', {'post': post})
+
+@login_required
+def delete(request, post_id):
+    post=Post.objects.get(id=post_id)
+    if request.method == 'POST':
+        post.delete()
+        return redirect('/')
+    
+
+    
+    

@@ -65,3 +65,35 @@ a{
 .logout{
     padding-right: 6px;
 }
+
+/* styles.css */
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .step-links {
+    display: inline-block;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+  }
+  
+  .step-links a {
+    color: #333;
+    text-decoration: none;
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .step-links a:hover {
+    background-color: #ddd;
+  }
+  
+  .current {
+    font-weight: bold;
+  }
+  
