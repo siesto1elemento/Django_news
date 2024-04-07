@@ -78,6 +78,12 @@ def delete(request, post_id):
         post.delete()
         return redirect('/')
     
+@login_required
+def comment(request, post_id):
+    if request.method == 'POST':
+        text = request.POST.get('text')
+    
+    
 
     
     

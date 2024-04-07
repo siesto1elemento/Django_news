@@ -10,5 +10,6 @@ urlpatterns = [
     path('submit_form',views.submit_form,name='submit_form'),
     path('update/<int:post_id>/',views.update,name="update"),
     path('delete/<int:post_id>/',views.delete,name="delete"),
+    path('comment/<int:post_id>/',views.comment,name="comment"),
     
 ]

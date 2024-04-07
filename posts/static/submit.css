@@ -1,17 +1,19 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #624444;
     margin: 0;
     padding: 0;
+    background-image: url('https://source.unsplash.com/random/1600x900');
+    background-size: cover;
+    background-position: center;
 }
 
 .container {
     max-width: 600px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
 }
 
 .comment-form {
@@ -20,16 +22,20 @@ body {
 }
 
 h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 36px; /* Increase font size for emphasis */
+    margin-bottom: 30px; /* Increased spacing below the heading */
     text-align: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Use a modern font */
+    color: #333; /* Dark text color for better contrast */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle text shadow for depth */
 }
 
 h1 span {
-    background-color: rgb(161, 158, 158);
-    padding: 5px;
-    border-radius: 5px;
+    background-color: #007bff; /* Change background color to a vibrant blue */
+    padding: 10px 20px; /* Increase padding for better visual appeal */
+    border-radius: 8px; /* Rounder corners */
+    color: #fff; /* White text color for better contrast */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
 }
 
 .form-group {
@@ -53,6 +59,7 @@ input[type="url"] {
     border-radius: 4px;
     transition: border-color 0.3s;
     box-sizing: border-box; /* Include this line */
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background for input fields */
 }
 
 input[type="text"]:focus,
@@ -74,4 +81,43 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
     background-color: #0056b3;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://source.unsplash.com/random/1600x900');
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 28px; /* Reduce font size for a more professional appearance */
+    margin-bottom: 20px; /* Decreased spacing below the heading */
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Use a modern font */
+    color: #333; /* Dark text color for better contrast */
+}
+
+h1 span {
+    background-color: #007bff; /* Change background color to a vibrant blue */
+    padding: 8px 16px; /* Adjust padding for better visual appeal */
+    border-radius: 8px; /* Rounder corners */
+    color: #fff; /* White text color for better contrast */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    font-weight: bold; /* Ensure bold text */
 }

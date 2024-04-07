@@ -31,11 +31,13 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "allauth_ui",
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'django.contrib.auth',
     'django.contrib.messages',
+    "widget_tweaks",
 
     
     'django.contrib.admin',
