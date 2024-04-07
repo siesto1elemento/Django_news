@@ -73,10 +73,11 @@ def update(request,post_id):
 
 @login_required
 def delete(request, post_id):
-    post=Post.objects.get(id=post_id)
-    if request.method == 'POST':
-        post.delete()
-        return redirect('/')
+    
+    post = get_object_or_404(Post, pk=post_id)
+    post.delete()
+    return redirect('home')  # Redirect to home page after deletion
+        
     
 @login_required
 def comment(request, post_id):

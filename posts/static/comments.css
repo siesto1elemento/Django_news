@@ -1,61 +1,99 @@
-/* comments.css */
+.posts{
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-top: 7px;
+}   
+    
+a{
+    text-decoration: none;
+}
 
-.background {
+.span{
+    display: flex;
+    align-items: center; 
+}
+
+.span div {
+    margin-right: 10px; /* Add spacing between post ID and post title */
+}
+
+.title{
+    
+    font-size: medium;
+    text-decoration: none;
+}
+.background{
     width: 85%;
     margin: 0 auto;
     background-color: #e3e0e0;
-    padding: 20px; /* Combined padding */
+    padding-bottom: 10px;
+    padding-top: 0px;
 }
-
-.title {
-    font-size: medium;
-    text-decoration: none;
-    padding-bottom: 10px; /* Add padding below the title */
-}
-
-.comment {
-    margin-bottom: 20px; /* Add margin between comments */
-}
-
-a {
-    text-decoration: none;
-}
-
-.lower {
+.lower{
     font-size: small;
-    color: rgb(76, 74, 74);
-    padding-left: 34px;
+    color:rgb(76, 74, 74);
+    padding-left:34px;
     padding-top: 5px;
 }
 
-.custom-ordered-list {
-    color: rgb(105, 103, 103);
+.custom-ordered-list{
+    color:rgb(105, 103, 103);
     margin-top: 1px;
 }
 
-.header {
+.header{
     display: flex;
     background-color: orangered;
-    width: 89%;
+    width: 85%;
     margin: 0 auto;
     margin-bottom: 0px;
 }
 
-.img,
-.hackernews {
+.img{
     padding: 7px;
-    font-size: medium;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-h1 {
-    font-size: medium;
-    color: rgb(105, 103, 103);
+/* Add the following CSS rules for the login div */
+.login {
+    margin-left: auto; /* Pushes login div to the right */
+    padding: 0 10px;
+    padding-top: 7px; /* Add padding for spacing */
 }
-.page-header {
+.hackernews{
+    padding-top: 8px;
+}
+.logout{
+    padding-right: 6px;
+}
+
+/* styles.css */
+
+.pagination {
     text-align: center;
-    font-size: large;
-    color: #333; /* You can adjust the color as needed */
-    margin-top: 20px; /* Add some space above the header */
-    margin-bottom: 20px; /* Add some space below the header */
-}
+    margin-top: 20px;
+  }
+  
+  .step-links {
+    display: inline-block;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+  }
+  
+  .step-links a {
+    color: #333;
+    text-decoration: none;
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .step-links a:hover {
+    background-color: #ddd;
+  }
+  
+  .current {
+    font-weight: bold;
+  }
+  
