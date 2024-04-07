@@ -1,8 +1,6 @@
-
-
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background-color: #624444;
     margin: 0;
     padding: 0;
 }
@@ -24,6 +22,14 @@ body {
 h1 {
     font-size: 24px;
     margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1 span {
+    background-color: rgb(161, 158, 158);
+    padding: 5px;
+    border-radius: 5px;
 }
 
 .form-group {
@@ -34,6 +40,10 @@ label {
     font-weight: bold;
 }
 
+.input_box {
+    margin: 0px;
+}
+
 input[type="text"],
 input[type="url"] {
     width: 100%;
@@ -42,6 +52,7 @@ input[type="url"] {
     border: 1px solid #ccc;
     border-radius: 4px;
     transition: border-color 0.3s;
+    box-sizing: border-box; /* Include this line */
 }
 
 input[type="text"]:focus,
