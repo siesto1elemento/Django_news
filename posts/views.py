@@ -81,8 +81,15 @@ def delete(request, post_id):
     
 @login_required
 def comment(request, post_id):
+    post = get_object_or_404(Post, pk=post_id)
     if request.method == 'POST':
         text = request.POST.get('text')
+        author = request.POST.get('author')
+        
+        new_entry = Comment(post=post, text=text, author=author)
+        new_entry.save()
+        return redirect('home')
+        
     
     
 

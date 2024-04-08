@@ -30,6 +30,15 @@
     </div>  
     
     <div class="background">
+        <form action="{% url 'comment' post.id %}" method="post">
+            {% csrf_token %}
+            <label for="text">Add Comment:</label>
+            <textarea name="text" id="text" ></textarea><br>
+            <label for="author">Author:</label>
+            <input type="text" id="author" name="author"><br>
+            <button type="submit">submit</button>
+
+        </form>
         
         <ol class="custom-ordered-list" >
             {% for comment in comments_s %}
