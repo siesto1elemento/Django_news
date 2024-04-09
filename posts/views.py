@@ -88,7 +88,7 @@ def comment(request, post_id):
         
         new_entry = Comment(post=post, text=text, author=author)
         new_entry.save()
-        return redirect('home')
+        return redirect('comments', post_id=post_id)
         
     
     
