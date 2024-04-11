@@ -2,5 +2,6 @@ Django==4.2.1
 django-allauth
 django-allauth-ui
 django-widget-tweaks
+django-debug-toolbar
 
 
