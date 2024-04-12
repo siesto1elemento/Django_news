@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect,get_object_or_404
 from django.views.decorators.http import require_POST
-from .models import Post,Comment
+from .models import Post,Comment,Vote
 from django.urls import reverse
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
@@ -27,9 +27,16 @@ def posts(request):
 def upvote_post(request, post_id):
     if request.method == 'POST':
         post = Post.objects.get(id=post_id)
-        post.upvotes += 1
-        post.save()
-        return redirect(reverse('home'))
+        user = request.user
+        
+        if not Vote.objects.filter(user=user, post=post).exists():
+            new_vote = Vote.objects.create(user=user, post=post)
+            new_vote.save()
+            post.upvotes += 1
+            post.save()
+            return redirect(reverse('home'))
+        else:
+            return HttpResponse("<h1>you have already upvoted</h1>")
     
 def comments(request, post_id):
     post = get_object_or_404(Post, id=post_id)
