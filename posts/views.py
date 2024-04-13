@@ -58,13 +58,10 @@ def submit_form(request):
         link = request.POST.get('url')
         author = request.POST.get('author', 'anonymous')
         
-
-        # Process the form data, for example, save it to the database
-        # Your processing logic goes here
         new_entry = Post(title=title, link=link, author=author)
         new_entry.save()
 
-        return redirect('/')  # Redirect to a success page
+        return redirect('/')  
     else:
         return HttpResponse('Method not allowed', status=405)
     
@@ -76,7 +73,7 @@ def update(request,post_id):
         post.url = request.POST.get('url')
         post.author = request.POST.get('author', 'anonymous')
         post.save()
-        return redirect('/')  # Redirect to success page or another appropriate page
+        return redirect('/')  
 
     return render(request, 'edit.html', {'post': post})
 
@@ -85,7 +82,7 @@ def delete(request, post_id):
     
     post = get_object_or_404(Post, pk=post_id)
     post.delete()
-    return redirect('home')  # Redirect to home page after deletion
+    return redirect('home')  
         
     
 @login_required
