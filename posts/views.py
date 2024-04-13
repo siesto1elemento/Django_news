@@ -28,15 +28,17 @@ def upvote_post(request, post_id):
     if request.method == 'POST':
         post = Post.objects.get(id=post_id)
         user = request.user
-        
-        if not Vote.objects.filter(user=user, post=post).exists():
-            new_vote = Vote.objects.create(user=user, post=post)
-            new_vote.save()
-            post.upvotes += 1
-            post.save()
-            return redirect(reverse('home'))
+        if not user.is_anonymous:
+            if not Vote.objects.filter(user=user, post=post).exists():
+                new_vote = Vote.objects.create(user=user, post=post)
+                new_vote.save()
+                post.upvotes += 1
+                post.save()
+                return redirect(reverse('home'))
+            else:
+                return HttpResponse("<h1>you have already upvoted</h1>")
         else:
-            return HttpResponse("<h1>you have already upvoted</h1>")
+            return redirect('accounts_login')
     
 def comments(request, post_id):
     post = get_object_or_404(Post, id=post_id)
